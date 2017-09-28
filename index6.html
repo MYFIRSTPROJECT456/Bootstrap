@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>collapse</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<div class="row" style="margin-top: 250px;">
+<a href="" data-toggle="tooltip" data-palcement="top" title="this is shirts img"><img  src="img/1.jpg" height="25px;" alt=""></a>
+<p>
+<button type="button" data-trigger="focus" data-toggle="popover" data-placement="right" title="this my button" data-content="this is best button of my popover">this is button</button></p>
+</div>
+</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();
+		});
+	</script>
+</body>
+</html>

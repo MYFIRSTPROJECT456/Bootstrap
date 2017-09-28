@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tootip</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+<div class="row" style="margin-left: 250px; margin-top: 250px; ">
+	
+<a href="" data-toggle="tooltip" data-placement="top" title="this is shirts"><img src="img/1.jpg" height="25px;" alt=""></a>
+
+<p> <button type="button" data-toggle="tooltip" data-placement="left" title="this is also a shirts"><img src="img/2.jpg" height="25px;" alt=""></button>
+</p>
+<p>
+<button type="button" data-toggle="popover" data-trigger="focus" data-placement="right" title="this popover" data-content="this is hover button and this is making in bootstrap" class="btn btn-info">this is popover button</button>
+</p>
+</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();
+
+		});
+
+	</script>
+</body>
+</html>

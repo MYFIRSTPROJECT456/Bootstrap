@@ -4,10 +4,27 @@
 	<meta charset="UTF-8">
 	<title>jumbotron</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.btn-group>ul>li>a
+		{
+			color: green;
+
+		}
+		.btn-group>ul>li>a:hover
+		{
+			color: black;
+			background-color: grey;
+
+		}
+		.dropdown-menu
+		{
+			width: 30px;
+		}
+	</style>
 </head>
 <body>
 <div class="container">
-	<div class="jumbotron" style="text-align: center;"><h1>my name is deepak chauhan</h1></div>
+	<div class="jumbotron" style="text-align: center;"><h1>My Name is Deepak Chauhan</h1></div>
  
  <!-- grid in bootstrap -->
  <div class="row">
@@ -109,9 +126,47 @@ Lorem ipsum dolor sit amet,<code> consectetur adipisicing </code> elit. Inventor
 <div class="btn btn-danger">Basic</div>
 <div class="btn btn-warning">Basic</div>
 <div class="btn btn-default">Basic</div>
-<br>	
+<br><br>	
 <div class="btn btn-success btn-lg btn-block">click here</div>
+<br>
+<div class="btn-group">
+	<div class="btn btn-success">Home</div>
+	<div class="btn btn-success">About Us</div>
+	<div class="btn btn-success">Products</div>
+	<div class="btn btn-success">Contact Us</div>
+	<div class="btn btn-success">Services</div>
+</div>
+<br><br>
+<div class="btn-group btn-group-lg">
+	<div class="btn btn-primary">Home</div>
+	<div class="btn btn-primary">About us</div>
+</div>
+<br><br>
 
+<div class="btn-group btn-group-vertical">
+	<div class="btn btn-info">Home</div>
+	<div class="btn btn-info">About Us</div>
+	<div class="btn btn-info">Services</div>
+</div>
+<br><br>
+
+<div class="btn-group btn-group-justified">
+	<div class="btn btn-danger">Home</div>
+	<div class="btn btn-danger">Services</div>
+	<div class="btn btn-danger">Products</div>
+</div>
+<br><br>
+
+<div style="margin-bottom: 200px;" class="btn-group">
+	<div class="btn btn-success">Services</div>
+	<div class="btn btn-success dropdown-toggle"  data-toggle="dropdown"><span class="caret"></span></div>
+
+<ul class="dropdown-menu">
+	<li><a href="">software</a></li>
+	<li><a href="">hardware</a></li>
+	<li><a href="">technical</a></li>
+</ul>
+</div>
 </div>
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.js"></script>

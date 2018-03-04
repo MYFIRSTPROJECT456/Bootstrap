@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="../public/css/bootstrap.min.css">
+<style>
+#div1, #div2,#div3,#div4, #div21,#div31,#div41,#div51  {
+    float: left;
+    width: 100px;
+    height: 70px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+#div1, #div2,#div3,#div4{
+	margin-top: 150px;
+}
+</style>
+<script>
+	var count = 0;
+function allowDrop(ev) {
+    ev.preventDefault();
+
+    /*var data = ev.dataTransfer.getData("text");
+    //alert(document.getElementById(data));
+    if ( document.getElementById(data) != '' ||  document.getElementById(data) != null ){
+    	return false;
+    }*/
+
+}
+
+function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if(ev.target.innerHTML.trim() == '') {
+    	ev.target.appendChild(document.getElementById(data));	
+    }
+    // alert(ev.target.getAttribute('id').substr(-1));
+    
+    if (ev.target.getAttribute('id').substr(-2) == data.substr(-2) ) {
+    	count++;
+    } 
+    else{
+    	count--;
+    }
+    alert(count);
+    if(count == 4) {
+    	document.getElementById('btn').disabled = false;
+    }
+    else{
+    	document.getElementById('btn').disabled = true;
+    }
+    
+}
+</script>
+</head>
+<body>
+	<form action="02.html" method="post">
+<div class="container-fluid">
+	<div class="row col-md-12">
+		<div class="col-md-3">
+			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			  <p draggable="true" ondragstart="drag(event)" id="drag21" width="88" height="31">Deepak chauhan</p>
+			</div>
+
+	<div id="div21" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+		<div class="col-md-3">
+			<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+			  <p draggable="true" ondragstart="drag(event)" id="drag31" width="88" height="31">Ramesh Thakur</p>
+			</div>
+	<div id="div31" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+		<div class="col-md-3">
+			<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+			  <p draggable="true" ondragstart="drag(event)" id="drag41" width="88" height="31">Abhishek Pandey</p>
+			</div>
+
+	<div id="div41" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+		<div class="col-md-3">
+			<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+			  <p draggable="true" ondragstart="drag(event)" id="drag51" width="88" height="31">Mahendar</p>
+			</div>
+
+	<div id="div51" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+	</div>
+</div>
+
+<input id="btn" type="submit" class="btn btn-success" value="countinue">
+</form>
+<script src="../public/js/jquery.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script>	
+	$(document).ready(function(){
+		$('p#drag1,#drag2,#drag3,#drag4').css({
+			'marginTop': '0px'
+		});
+		$('#btn').css({
+			'marginLeft': '600px',
+			'marginTop': '100px'
+		});
+		
+});
+
+var btn = document.getElementById('btn');
+btn.disabled = true;
+	
+	
+</script>
+</body>
+</html>
